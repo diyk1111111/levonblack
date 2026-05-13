@@ -388,11 +388,11 @@ function playAgain() {
 
 /* Side panels */
 .side-panel {
-  padding: 20px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background: var(--bg2);
+  display: none;
+}
+
+.player-card {
+  width: 220px;
 }
 
 .side-panel.left  { border-right: 1px solid rgba(255,255,255,0.05); }
@@ -476,34 +476,14 @@ function playAgain() {
   padding: 20px 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  overflow-y: auto;
+  align-items: center;
+  gap: 18px;
   min-width: 0;
+  overflow: visible;
 }
 
 .wheel-center {
   display: flex;
   justify-content: center;
-}
-
-/* Responsive */
-@media (max-width: 1800px) {
-  .game-area {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-  }
-
-  .side-panel {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 12px;
-    gap: 10px;
-  }
-
-  .side-panel.left  { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
-  .side-panel.right { border-left: none;  border-top:    1px solid rgba(255,255,255,0.05); }
-
-  .player-card { min-width: 160px; flex: 1; }
-  .center-col { padding: 16px; }
 }
 </style>
