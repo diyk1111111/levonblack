@@ -153,15 +153,13 @@ function playAgain() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
+  padding: 10px 24px;
   background: var(--card);
   border-bottom: 1px solid var(--border);
   gap: 12px;
   flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -473,13 +471,13 @@ function playAgain() {
 
 /* Center column */
 .center-col {
-  padding: 20px 24px;
+  padding: 12px 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
-  min-width: 0;
+  gap: 14px;
   overflow: visible;
+  min-width: 0;
 }
 
 .wheel-center {
