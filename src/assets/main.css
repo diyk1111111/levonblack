@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Exo+2:wght@300;400;600;700;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0d0508;
+  --bg2:       #160c10;
+  --bg3:       #1f1118;
+  --card:      #1a0e14;
+  --gold:      #f0c040;
+  --gold2:     #c9922a;
+  --gold-glow: rgba(240,192,64,0.25);
+  --crimson:   #c0173a;
+  --crimson2:  #8b0f28;
+  --neon-pink: #ff2d6e;
+  --neon-blue: #00d4ff;
+  --green:     #00e676;
+  --text:      #f5f0e8;
+  --text-dim:  #b8a89c;
+  --text-muted:#7a6860;
+  --border:    rgba(240,192,64,0.15);
+  --radius:    14px;
+  --radius-sm: 8px;
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Exo 2', sans-serif;
+  --shadow-gold:  0 0 30px rgba(240,192,64,0.2), 0 0 60px rgba(240,192,64,0.08);
+  --shadow-card:  0 8px 40px rgba(0,0,0,0.6);
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+#app-root { min-height: 100vh; }
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+  transition: all 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Gold divider utility */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.4;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--gold2); border-radius: 3px; }
