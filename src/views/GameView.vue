@@ -381,9 +381,8 @@ function playAgain() {
 /* Game Area - 3 columns */
 .game-area {
   flex: 1;
-  display: grid;
-  grid-template-columns: 220px 1fr 220px;
-  gap: 0;
+  display: flex;
+  flex-direction: column;
   min-height: 0;
 }
 
