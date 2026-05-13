@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Nunito:wght@400;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0a0a1a;
+  --bg2: #12122a;
+  --gold: #f5c842;
+  --gold2: #e8a800;
+  --red: #e8304a;
+  --blue: #3a7bd5;
+  --text: #f0eefc;
+  --text-muted: #8884aa;
+  --radius: 12px;
+  --font-display: 'Unbounded', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#app-root {
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
